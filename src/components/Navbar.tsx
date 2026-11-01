@@ -50,21 +50,21 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* Top Header */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-14 sm:h-16">
+          <div className="flex items-center justify-between h-14 sm:h-16 gap-1.5">
             {/* Brand */}
             <div
-              className="flex items-center gap-2 sm:gap-2.5 cursor-pointer shrink-0"
+              className="flex items-center gap-1.5 sm:gap-2.5 cursor-pointer shrink-0"
               onClick={() => setCurrentTab('home')}
             >
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-blue-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-indigo-200">
+              <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-blue-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-indigo-200 shrink-0">
                 <Compass className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <span className="font-extrabold text-slate-900 tracking-tight text-base sm:text-lg flex items-center">
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <span className="font-extrabold text-slate-900 tracking-tight text-sm sm:text-lg flex items-center">
                     Score<span className="text-indigo-600">Compass</span>
                   </span>
-                  <span className="text-[10px] sm:text-xs font-semibold px-1.5 sm:px-2 py-0.2 sm:py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">
+                  <span className="hidden sm:inline-block text-[10px] sm:text-xs font-semibold px-1.5 sm:px-2 py-0.2 sm:py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">
                     AI 채점
                   </span>
                 </div>

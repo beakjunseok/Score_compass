@@ -183,7 +183,6 @@ export const AITutorAgent: React.FC<AITutorAgentProps> = ({
 
   const handleSpeak = (text: string, id: string) => {
     if (!('speechSynthesis' in window)) {
-      alert('사용하시는 브라우저가 음성 읽기(TTS)를 지원하지 않습니다.');
       return;
     }
 
@@ -258,8 +257,8 @@ export const AITutorAgent: React.FC<AITutorAgentProps> = ({
 
   return (
     <>
-      {/* Floating Bottom-Right Launcher Trigger */}
-      <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end">
+      {/* Floating Bottom-Right Launcher Trigger (above mobile bottom nav) */}
+      <div className="fixed bottom-16 right-3 md:bottom-6 md:right-6 z-40 flex flex-col items-end">
         {/* Tooltip speech bubble when closed */}
         {!isOpen && (
           <button

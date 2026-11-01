@@ -180,7 +180,7 @@ export const PublicDataBadgeModal: React.FC<PublicDataBadgeModalProps> = ({
                   <div className="p-2.5 rounded-xl bg-purple-50/60 border border-purple-100 text-xs text-purple-950 font-mono space-y-1">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                       <span>API 엔드포인트: https://krdict.korean.go.kr/api/search</span>
-                      <span className="text-emerald-700 font-bold">인증키: F15D260C...10BB5</span>
+                      <span className="text-emerald-700 font-bold">인증키: cJB96gkY...LC9n</span>
                     </div>
                     <div className="text-[11px] text-purple-800">
                       연계 단어: 연역, 귀납, 항상성, 한계효용, 복선, 배타적, 이차방정식, 판별식 등
@@ -268,7 +268,7 @@ export const PublicDataBadgeModal: React.FC<PublicDataBadgeModalProps> = ({
                 </p>
                 <div className="text-[11px] font-mono text-purple-900 bg-white/80 p-2.5 rounded-xl border border-purple-200 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <span>엔드포인트: https://krdict.korean.go.kr/api/search</span>
-                  <span className="font-bold text-indigo-700">인증키: F15D260CF716C44BAC015D6490010BB5</span>
+                  <span className="font-bold text-indigo-700">인증키: cJB96gkY-dsfS-JP6U-9c5h-dNF1LC9n</span>
                 </div>
               </div>
 
