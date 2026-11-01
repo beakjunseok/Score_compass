@@ -17,6 +17,30 @@ const isProduction = process.env.NODE_ENV === 'production';
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
+// URL normalization middleware for Vercel Serverless Function compatibility
+app.use((req, res, next) => {
+  if (
+    req.url &&
+    !req.url.startsWith('/api') &&
+    req.url !== '/' &&
+    !req.url.startsWith('/assets') &&
+    !req.url.startsWith('/index.html')
+  ) {
+    req.url = '/api' + (req.url.startsWith('/') ? req.url : '/' + req.url);
+  }
+  next();
+});
+
+// Health check endpoint for Vercel deployment verification
+app.get(['/api/health', '/health'], (req, res) => {
+  res.json({
+    status: 'ok',
+    service: 'ScoreCompass Backend',
+    vercel: Boolean(process.env.VERCEL),
+    timestamp: new Date().toISOString(),
+  });
+});
+
 // Server-side Gemini client
 const apiKey = process.env.GEMINI_API_KEY;
 const ai = apiKey
