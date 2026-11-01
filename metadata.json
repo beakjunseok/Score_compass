@@ -1,0 +1,6 @@
+{
+  "name": "wincomtech AI 자동 채점 및 오답 분석",
+  "description": "문제집과 답안지 사진을 업로드하면 AI가 페이지와 문제 번호를 인식하여 자동으로 채점하고 틀린 문제와 오답 노트를 제공하는 스마트 교육 서비스",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
